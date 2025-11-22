@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Encryptor/Decryptor</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Text Encryptor/Decryptor</h1>
+        <p class="subtitle">Encrypt and decrypt your messages with AES encryption</p>
+        
+        <div class="main-content">
+            <!-- Input Section -->
+            <div class="section">
+                <h2>Input Text</h2>
+                <textarea id="inputText" class="textarea" placeholder="Enter your message here..."></textarea>
+            </div>
+
+            <!-- Secret Key Section -->
+            <div class="section">
+                <h2>Secret Key</h2>
+                <input type="password" id="secretKey" class="input-field" placeholder="Enter your secret key...">
+                <small>Keep this key safe! You'll need it to decrypt messages.</small>
+            </div>
+
+            <!-- Buttons Section -->
+            <div class="button-group">
+                <button id="encryptBtn" class="btn btn-encrypt">🔒 Encrypt</button>
+                <button id="decryptBtn" class="btn btn-decrypt">🔓 Decrypt</button>
+                <button id="copyBtn" class="btn btn-copy">📋 Copy Output</button>
+                <button id="clearBtn" class="btn btn-clear">🗑️ Clear All</button>
+            </div>
+
+            <!-- Output Section -->
+            <div class="section">
+                <h2>Output Text</h2>
+                <textarea id="outputText" class="textarea" readonly placeholder="Encrypted/Decrypted text will appear here..."></textarea>
+            </div>
+
+            <!-- Info Section -->
+            <div class="info-box">
+                <h3>ℹ️ How to Use:</h3>
+                <ul>
+                    <li>Enter your message in the "Input Text" field</li>
+                    <li>Set a strong secret key (password)</li>
+                    <li>Click "Encrypt" to encode your message</li>
+                    <li>To decrypt, paste the encrypted text in "Input Text", enter the same key, and click "Decrypt"</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <p>Made with ❤️ | Text Encryptor/Decryptor v1.0</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
